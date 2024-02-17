@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function Header() {
-  return (
-    <div>Header</div>
-  )
+  return <div className='max-w-screen-2xl mx-auto'>Header</div>;
 }
