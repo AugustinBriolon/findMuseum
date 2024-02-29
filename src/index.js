@@ -6,10 +6,11 @@ import './index.css';
 
 import Layout from './pages/Layout';
 import Home from './pages/Home';
-import Test from './pages/Test';
+import Museum from './pages/Museum';
 import ErrorPage from './pages/Error';
 
 const queryClient = new QueryClient();
+
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,11 @@ const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: '/', element: <Home /> },
-      { path: '/test', element: <Test /> },
+      {
+        path: '/',
+        element: <Home />,
+      },
+      { path: '/museum/:id', element: <Museum /> },
     ],
   },
 ]);
